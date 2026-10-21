@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lost &amp; Found privacy policy · Third Burner</title>
+<meta name="description" content="Privacy policy for Lost & Found, a cozy sorting game by Third Burner Games for Android.">
+<meta name="theme-color" content="#07070d">
+<link rel="canonical" href="https://thirdburner.com/privacy/lost-and-found/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #07070d; --ink: #eef0ff; --body: #c7cae0; --muted: #8d91ab; --card: rgba(255,255,255,.035); --edge: rgba(255,255,255,.09);
+    --c: 190,100,255;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    position: relative; overflow-x: hidden; min-height: 100vh; background: var(--bg); color: var(--body);
+    font-family: "Space Grotesk", system-ui, sans-serif; font-size: 17px; line-height: 1.65;
+    padding: 0 clamp(16px, 5vw, 56px) 64px;
+  }
+  a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: rgba(var(--c), .7); }
+  a:hover { text-decoration-color: rgb(var(--c)); }
+  :focus-visible { outline: 2px solid #ff7a3d; outline-offset: 3px; border-radius: 6px; }
+
+  /* A quiet slice of the home page's horizon, without the motion */
+  .glow { position: absolute; inset: 0 0 auto; height: 420px; pointer-events: none; overflow: hidden;
+    background: radial-gradient(50% 70% at 50% 0%, rgba(var(--c), .2), transparent 70%), linear-gradient(#07070d, #110a1f 60%, #07070d); }
+  .glow::after { content: ""; position: absolute; left: -50%; right: -50%; bottom: 0; height: 180px; transform: perspective(300px) rotateX(62deg); transform-origin: bottom;
+    background-image: linear-gradient(rgba(220,80,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(220,80,255,.35) 1px, transparent 1px); background-size: 48px 48px;
+    -webkit-mask: linear-gradient(transparent, #000 60%, transparent); mask: linear-gradient(transparent, #000 60%, transparent); }
+
+  .wrap { position: relative; max-width: 1120px; margin: 0 auto; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 22px 0; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.01em; text-decoration: none; white-space: nowrap; color: var(--ink); }
+  .logo svg { color: #ff7a3d; filter: drop-shadow(0 0 6px rgba(255,122,61,.8)); }
+  nav { display: flex; gap: 4px; padding: 4px; border: 1px solid var(--edge); border-radius: 999px; background: rgba(10,10,18,.6); }
+  nav a { text-decoration: none; font-size: 14px; color: var(--muted); padding: 6px 12px; border-radius: 999px; transition: color 150ms ease-out, background-color 150ms ease-out; }
+  nav a:hover, nav a[aria-current] { color: var(--ink); background: rgba(255,255,255,.07); }
+
+  .doc { max-width: 720px; margin: 0 auto; }
+  .title { padding: clamp(56px, 10vw, 110px) 0 36px; }
+  .bar { display: inline-flex; align-items: center; gap: 6px; font: 400 12px/1 "JetBrains Mono", monospace; color: var(--muted); }
+  .bar i { width: 9px; height: 9px; border-radius: 50%; background: rgb(var(--c)); box-shadow: 0 0 8px rgb(var(--c)); }
+  h1 { margin: 14px 0 10px; color: var(--ink); font-size: clamp(36px, 6vw, 60px); font-weight: 700; letter-spacing: -0.04em; line-height: 1; text-shadow: 0 0 30px rgba(var(--c), .35); }
+  .meta { margin: 0; color: var(--muted); font: 400 13px/1.5 "JetBrains Mono", monospace; }
+
+  .summary { margin: 0 0 40px; padding: 22px 24px; border: 1px solid rgba(var(--c), .35); border-radius: 14px; background: rgba(10,10,18,.85); box-shadow: 0 0 32px rgba(var(--c), .12); }
+  .summary h2 { margin-top: 0; }
+  .summary ul { margin: 0; }
+
+  h2 { margin: 44px 0 10px; color: var(--ink); font-size: 22px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; }
+  h2 .n { margin-right: 10px; font: 400 13px/1 "JetBrains Mono", monospace; color: rgb(var(--c)); vertical-align: 3px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin: 0 0 6px; }
+  li::marker { color: rgb(var(--c)); }
+  strong { color: var(--ink); font-weight: 500; }
+
+  footer { margin-top: 64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  footer > div { padding: 20px; border: 1px solid var(--edge); border-radius: 16px; background: var(--card); font-size: 14px; color: var(--muted); }
+  footer h3 { margin: 0 0 8px; font-size: 13px; color: var(--ink); letter-spacing: .06em; text-transform: uppercase; font-weight: 500; }
+
+  @media (max-width: 760px) {
+    footer { grid-template-columns: 1fr; }
+    nav a { padding: 6px 8px; }
+  }
+  @media (max-width: 420px) { .logo span { display: none; } }
+  @media print {
+    body { background: #fff; color: #111; padding: 0; }
+    .glow, header, footer { display: none; }
+    h1, h2, strong, a { color: #111; text-shadow: none; }
+    .summary { border-color: #ccc; background: none; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="/" aria-label="Third Burner home">
+        <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="2.6"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="2.6"/><circle cx="16" cy="16" r="2.4" fill="currentColor"/></svg>
+        <span>Third Burner</span>
+      </a>
+      <nav aria-label="Main">
+        <a href="/#brands">Brands</a>
+        <a href="/privacy/lost-and-found/" aria-current="page">Privacy</a>
+        <a href="mailto:hello@thirdburner.com">Contact</a>
+      </nav>
+    </header>
+
+    <main class="doc">
+      <div class="title">
+        <span class="bar"><i></i>~/third-burner-games/lost-and-found/privacy</span>
+        <h1>Lost &amp; Found privacy policy</h1>
+        <p class="meta">Last updated: October 21, 2026 · Applies to the Lost &amp; Found app for Android</p>
+      </div>
+
+      <section class="summary" aria-labelledby="short">
+        <h2 id="short">The short version</h2>
+        <ul>
+          <li>There are no accounts, and we don't collect your name, email or contacts.</li>
+          <li>Your progress and settings are saved only on your phone.</li>
+          <li>Ads appear only when you choose to watch one for a hint. Google's ad service may collect some device data to show and measure that ad.</li>
+          <li>Purchases go through Google Play. We never see your payment details.</li>
+          <li>We don't sell your data.</li>
+        </ul>
+      </section>
+
+      <h2><span class="n">01</span>Who we are</h2>
+      <p>Lost &amp; Found is made by Third Burner Games, part of Third Burner ("we", "us"). If you have a question about this policy or your data, email <a href="mailto:hello@thirdburner.com">hello@thirdburner.com</a>.</p>
+
+      <h2><span class="n">02</span>What stays on your phone</h2>
+      <p>The game saves your progress (which shifts you've finished and your stars), your settings (such as sound and reduced motion) and whether you've unlocked the full game. This is stored on your device using Android's standard app storage. It is not sent to us, and we can't see it.</p>
+      <p>If you uninstall the game or clear its data, this saved information is deleted. A full-game purchase can be restored afterwards from the game's "Restore purchase" button.</p>
+
+      <h2><span class="n">03</span>Ads for hints (Google AdMob)</h2>
+      <p>The game never shows ads on its own. An ad plays only when you tap "Watch an ad for a hint". These ads are provided by Google AdMob. When an ad is requested or shown, Google may collect information such as:</p>
+      <ul>
+        <li>your device's advertising ID and other device identifiers</li>
+        <li>your IP address, and an approximate location worked out from it</li>
+        <li>device and app details, such as model, operating system and language</li>
+        <li>how you interact with the ad, and diagnostic data</li>
+      </ul>
+      <p>Google uses this to deliver ads, measure them, prevent fraud and, where you allow it, personalise them. We don't receive this information in a form that identifies you. You can read how Google handles it at <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use its services</a> and in <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>.</p>
+      <p><strong>Your choices:</strong> if you're in the European Economic Area, the UK or Switzerland, the game asks for your consent before personalised ads are shown, using Google's consent tool. You can change that choice later from the game's settings. On any Android phone you can also reset or delete your advertising ID, or opt out of personalised ads, in your phone's Settings under Google › Ads (the exact menu varies by phone). If you never tap the hint button, no ads are requested.</p>
+
+      <h2><span class="n">04</span>Purchases (Google Play)</h2>
+      <p>The first chapter is free. The rest of the game is a one-time purchase made through Google Play Billing. Google handles the payment, and we never receive your card or bank details. The game receives only a confirmation from Google Play that the purchase is valid, so it can unlock the full game and restore it later. Google's handling of purchase data is covered by <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>.</p>
+
+      <h2><span class="n">05</span>Permissions</h2>
+      <p>The game uses internet access only to load hint ads and to check purchases with Google Play. It also includes Google's standard advertising ID permission, which the ad service needs. It does not ask for access to your contacts, camera, microphone, photos or precise location.</p>
+
+      <h2><span class="n">06</span>What we don't do</h2>
+      <ul>
+        <li>We don't sell or rent personal information.</li>
+        <li>We don't run our own analytics or tracking in the game.</li>
+        <li>We don't use cloud saves or store player data on our own servers.</li>
+      </ul>
+
+      <h2><span class="n">07</span>Children</h2>
+      <p>Lost &amp; Found is not directed at children under 13, and we don't knowingly collect personal information from them. If you believe a child has provided personal information through the game, email us and we'll help.</p>
+
+      <h2><span class="n">08</span>Your rights</h2>
+      <p>Depending on where you live, you may have the right to access, correct or delete personal information about you, or to object to how it's used. Because we don't hold player data ourselves, the quickest way to delete what the game stores is to clear the app's data or uninstall it. For data collected by Google, use <a href="https://myaccount.google.com/data-and-privacy" rel="noopener">your Google account's privacy controls</a> or the ad settings described above. You can also email us and we'll respond within 30 days.</p>
+
+      <h2><span class="n">09</span>Security</h2>
+      <p>Saved game data stays inside the app's private storage on your phone, which other apps can't read. Ad and purchase traffic is handled by Google over encrypted connections.</p>
+
+      <h2><span class="n">10</span>Changes to this policy</h2>
+      <p>If the game changes in a way that affects your data, such as a new ad provider or online features, we'll update this page and the "Last updated" date above. For significant changes, we'll also mention it in the game's update notes.</p>
+
+      <h2><span class="n">11</span>Contact</h2>
+      <p>Third Burner · <a href="mailto:hello@thirdburner.com">hello@thirdburner.com</a></p>
+    </main>
+
+    <footer>
+      <div><h3>Privacy</h3><a href="/privacy/lost-and-found/">Lost &amp; Found privacy policy</a></div>
+      <div><h3>Contact</h3><a href="mailto:hello@thirdburner.com">hello@thirdburner.com</a></div>
+      <div><h3>Third Burner</h3>© 2026 Third Burner</div>
+    </footer>
+  </div>
+</body>
+</html>
